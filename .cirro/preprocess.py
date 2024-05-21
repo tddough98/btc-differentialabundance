@@ -3,9 +3,7 @@ import csv
 from cirro.helpers.preprocess_dataset import PreprocessDataset
 
 def make_samplesheet(ds):
-    # Make a wide-form samplesheet with columns: sample, fastq_1, and fastq_2
-    samplesheet = ds.wide_samplesheet()
-
+    samplesheet = ds.wide_samplesheet(columns=[])
     # Merge in the metadata for these samples (if any exists)
     samplesheet = pd.merge(samplesheet, ds.samplesheet, left_on="sample", right_on="sample")
     variable = ds.params["variable"]
