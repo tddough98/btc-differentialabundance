@@ -1,0 +1,12 @@
+{
+  "input": "samplesheet.csv",
+  "variable": "condition",
+  "reference": "S4",
+  "target": "S5",
+  "outdir": "s3://project-92f55c08-cb6c-486c-8ac9-84b2aa626c24/datasets/984ab6d4-cde9-46c1-ad90-6c51ec8353b5/data/",
+  "matrix": "s3://project-92f55c08-cb6c-486c-8ac9-84b2aa626c24/datasets/62257f4a-257d-4f0d-b1bd-36a3e630b056/data/star_salmon/salmon.merged.gene_counts.tsv",
+  "transcript_length_matrix": "s3://project-92f55c08-cb6c-486c-8ac9-84b2aa626c24/datasets/62257f4a-257d-4f0d-b1bd-36a3e630b056/data/star_salmon/salmon.merged.gene_lengths.tsv",
+  "contrasts": "contrasts.csv",
+  "gtf": "s3://project-92f55c08-cb6c-486c-8ac9-84b2aa626c24/resources/data/references/genome_gtf/hg38_gencode_basic/genome.gtf",
+  "shinyngs_build_app": true
+}
