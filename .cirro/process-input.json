@@ -3,7 +3,7 @@
     "outdir": "$.params.dataset.s3|/data/",
     "matrix": "$.params.dataset.paramJson.abundance_values.matrix",
     "transcript_length_matrix": "$.params.dataset.paramJson.abundance_values.transcript_length_matrix",
-    "contrasts": "$.params.dataset.paramJson.input_output_options.contrasts",
+    "contrasts": "contrasts.csv",
     "gtf": "$.params.dataset.paramJson.reference_genome_options.gtf",
     "shinyngs_build_app": "$.params.dataset.paramJson.shiny_app_settings.shinyngs_build_app"
 }
