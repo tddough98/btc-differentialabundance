@@ -17,6 +17,7 @@ def make_samplesheet(ds):
 
     # Set up a workflow param pointing to that file (e.g., for nf-core/rnaseq)
     ds.add_param("input", "samplesheet.csv")
+    ds.logger.info(samplesheet.to_csv(index=None))
 
 def make_contrasts(ds):
     # Generate the contrasts.csv
@@ -29,6 +30,8 @@ def make_contrasts(ds):
     with open("contrasts.csv", "w") as f:
         csv.writer(f).writerow(["id", "variable", "reference", "target"])
         csv.writer(f).writerow([f"{reference}_vs_{target}", variable, reference, target])
+    with open("contrasts.csv", "r") as f:
+        ds.logger.info(f.readlines())
 
 if __name__ == "__main__":
     ds = PreprocessDataset.from_running()
