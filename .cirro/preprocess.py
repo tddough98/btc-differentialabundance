@@ -15,7 +15,6 @@ def make_samplesheet(ds):
     samplesheet.to_csv("samplesheet.csv", index=None)
 
     # Set up a workflow param pointing to that file (e.g., for nf-core/rnaseq)
-    ds.add_param("input", "samplesheet.csv")
     ds.logger.info(samplesheet.to_csv(index=None))
 
 def make_contrasts(ds):
