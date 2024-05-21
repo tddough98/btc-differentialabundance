@@ -1,5 +1,8 @@
 {
     "input": "samplesheet.csv",
+    "variable": "$.params.dataset.paramJson.input_output_options.variable",
+    "reference": "$.params.dataset.paramJson.input_output_options.reference",
+    "target": "$.params.dataset.paramJson.input_output_options.target",
     "outdir": "$.params.dataset.s3|/data/",
     "matrix": "$.params.dataset.paramJson.abundance_values.matrix",
     "transcript_length_matrix": "$.params.dataset.paramJson.abundance_values.transcript_length_matrix",
