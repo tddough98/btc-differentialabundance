@@ -3,9 +3,10 @@ import csv
 from cirro.helpers.preprocess_dataset import PreprocessDataset
 
 def make_samplesheet(ds):
-    samplesheet = ds.wide_samplesheet(columns=[])
-    # Merge in the metadata for these samples (if any exists)
-    samplesheet = pd.merge(samplesheet, ds.samplesheet, left_on="sample", right_on="sample")
+    samplesheet = ds.samplesheet
+    # Drop rows where sample column containing 'samtools'
+    samplesheet = samplesheet[~samplesheet["sample"].str.contains("samtools")]
+    
     variable = ds.params["variable"]
     if variable not in samplesheet:
         raise ValueError(f"Column {variable} not found in samplesheet")
